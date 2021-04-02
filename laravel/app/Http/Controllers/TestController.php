@@ -22,6 +22,7 @@ class TestController extends Controller
         //apiのデータを取得、json形式を配列に変換
         $results = $response->getBody();
         $posts = json_decode($results, true);
+
         return view('index', compact('posts'));
     }
 }
